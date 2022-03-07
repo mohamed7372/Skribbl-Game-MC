@@ -1,0 +1,513 @@
+:root {
+    --main-color: #9dbbd9;
+    --second-color: #FFC700;
+    --third-color: #FAF1AC;
+}
+
+@font-face {
+    font-family: "Upheaval TT (BRK)";
+    src: url("../fonts/upheavtt.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Upheaval TT (BRK)', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* start menu  */
+
+header.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header.menu img:last-of-type {
+    cursor: pointer;
+    z-index: 60;
+}
+
+header.menu,
+footer.menu {
+    width: 1324px;
+}
+
+main.menu {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: repeat(3, 220px);
+    grid-template-rows: repeat(2, 200px);
+    padding: 30px 16px 0;
+    width: fit-content;
+    height: 75vh;
+}
+
+.cube-menu {
+    background-color: var(--second-color);
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+.cube-menu .cube-inside {
+    background-color: var(--third-color);
+    width: calc(100% - 10px);
+    height: calc(100% - 38px);
+    margin: 16px auto 22px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end menu  */
+
+/* start landing page  */
+main.landing img {
+    width: 812px;
+}
+
+main.landing .loading {
+    margin-top: 50px;
+    width: 500px;
+    height: 12px;
+    border-radius: 30px;
+    border: 3px solid black;
+    background-color: var(--third-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main.landing .cube-menu {
+    width: 588px;
+}
+
+main.landing .cube-menu .cube-inside {
+    margin: 10px auto 10px auto;
+    width: 568px;
+    height: 80px;
+}
+
+main.landing .cube-inside input {
+    font-size: 80px;
+    width: 410px;
+    height: 100%;
+    background-color: var(--third-color);
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* end landing page  */
+
+/* start choose player  */
+main.choose .player img {
+    width: 300px;
+}
+
+main.choose h1 {
+    font-size: 70px;
+    color: var(--third-color);
+    text-shadow: 0px 0px 4px black;
+}
+
+main.choose .button {
+    display: flex;
+    justify-content: center;
+}
+
+main.choose .button .cube {
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+main.choose .button .cube .cube-inside {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    font-size: 56px;
+    color: rgb(100, 100, 100);
+}
+
+main.choose .button .cube .cube-inside p {
+    padding: 10px;
+    text-align: center;
+}
+
+main.choose {
+    position: relative;
+}
+
+main.choose .round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -30px;
+    z-index: 70;
+}
+
+main.choose .round .cube {
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+main.choose .round .cube .cube-inside {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+main.choose .round .cube .cube-inside p {
+    padding: 0 10px;
+}
+
+/* end choose player  */
+
+/* start room code  */
+main.room-code {
+    position: absolute;
+    background-color: var(--main-color);
+    opacity: 90%;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 50;
+}
+
+main.room-code h1 {
+    font-size: 138px;
+    color: var(--third-color);
+    margin-bottom: 90px;
+}
+
+main.room-code .cube {
+    width: 580px;
+    height: 91px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+main.room-code .cube .cube-inside {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    font-size: 56px;
+    color: rgb(100, 100, 100);
+}
+
+main.room-code .cube .cube-inside input {
+    width: 100%;
+    height: 100%;
+    background-color: var(--third-color);
+    text-align: center;
+    font-size: 40px;
+    padding: 0 70px;
+    outline: none;
+    border: none;
+}
+
+main.room-code .next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+main.room-code .next-btn .cube-btn {
+    background-color: var(--second-color);
+    border: 3px solid black;
+    height: fit-content;
+    width: 118px;
+    border-radius: 3px;
+    padding: 10px 30px;
+    font-size: 40px;
+    margin: auto;
+    text-align: center;
+    display: none;
+}
+
+/* end room code  */
+
+/* start play game  */
+main.play-game .player img {
+    width: 120px;
+}
+
+/* end play game  */
+
+/* start setting  */
+.set {
+    position: fixed;
+    background-color: var(--main-color);
+    z-index: 1000;
+    top: 0;
+    display: none;
+    height: 100vh;
+}
+.set .set-retour {
+    /* margin-left: 100px; */
+    width: 200px;
+    height: 50px;
+}
+.set .set-retour img {
+    display: block;
+    background-color: transparent;
+    width: 40px;
+    height: 20px;
+    position: fixed;
+    bottom: 30px;
+    left: 60px;
+}
+/* end setting  */
+
+/* start screen game  */
+.screen-game {
+    display: none;
+}
+.screen-game header {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.screen-game header .info {
+    display: flex;
+    font-size: 63px;
+}
+
+.screen-game header .details {
+    display: flex;
+}
+
+.screen-game header .info .score {
+    color: red;
+    text-shadow: 3px 3px 1px black;
+    margin-left: 64px;
+}
+
+.screen-game header .round,
+.screen-game header .time {
+    display: flex;
+    background-color: white;
+    font-size: 26px;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    padding: 20px;
+}
+
+.screen-game header .time p:last-of-type {
+    margin-left: 10px;
+}
+
+.screen-game header .icon {
+    margin: 0 0 0 10px;
+    align-self: center;
+}
+
+.screen-game header .icon img {
+    cursor: pointer;
+}
+
+.screen-game aside {
+    width: 350px;
+}
+
+.screen-game .main {
+    height: calc(100% - 68px);
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.screen-game .footer {
+    height: 45px;
+    width: calc(100% - 10px);
+    margin-left: 10px;
+}
+
+.screen-game .footer .icons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+}
+
+.screen-game .footer .icons img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.screen-game .bloc-md {
+    display: flex;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    height: 75vh;
+}
+
+.screen-game .bloc-md .player {
+    margin-bottom: 10px;
+    display: flex;
+    padding: 10px;
+}
+
+.screen-game .bloc-md .player img {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.screen-game .bloc-md .player .info {
+    align-self: center;
+}
+
+.screen-game .bloc-md .player .info p:first-of-type {
+    font-size: 30px;
+}
+
+.screen-game .bloc-md .player .info p:last-of-type {
+    font-size: 20px;
+    color: red;
+    text-shadow: 1px 1px black;
+}
+.screen-game aside{
+        position: relative;
+}
+.screen-game aside .name-room {
+    width: calc(100% - 20px);
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    border: solid black;
+    border-width: 3px 0 0 0;
+}
+.screen-game .side-right {
+    width: 100%;
+}
+
+/* end screen game  */
+
+/* start components  */
+
+main {
+    height: 67%;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    z-index: 65;
+}
+
+footer img {
+    border-radius: 4px;
+    border: 3px solid black;
+    padding: 3px 16px;
+    cursor: pointer;
+    margin: 0 90px;
+    display: none;
+}
+
+footer img:first-of-type {
+    width: 34px;
+    height: 22px;
+    z-index: 60;
+}
+
+footer img:last-of-type {
+    width: 44px;
+    height: 32px;
+    background-color: var(--second-color);
+    padding-top: 10px;
+}
+
+.cube {
+    background-color: var(--second-color);
+    border: 3px solid black;
+}
+
+.cube .cube-inside {
+    background-color: var(--third-color);
+    text-align: center;
+}
+
+.step-game {
+    width: fit-content;
+    margin-top: 40px;
+}
+
+.step-game nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 1100px;
+}
+
+.step-game nav .step {
+    width: 344px;
+    height: 14px;
+    background-color: var(--third-color);
+    border: 1px solid black;
+}
+
+.step-game nav .step.active {
+    background-color: var(--second-color);
+}
+
+.next-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.next-btn .cube-btn {
+    background-color: var(--second-color);
+    border: 3px solid black;
+    height: fit-content;
+    width: 118px;
+    border-radius: 3px;
+    padding: 10px 30px;
+    font-size: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+.cube-grey {
+    background-color: #C4C4C4;
+    border: 3px solid black;
+}
+
+/* end components  */
